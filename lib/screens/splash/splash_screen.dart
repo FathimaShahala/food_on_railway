@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_on_railway/screens/onBoarding/on_boarding_screen.dart';
+import 'package:food_on_railway/utils/app_colors.dart';
 import 'package:food_on_railway/utils/app_images.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -38,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen>
         width: double.infinity,
         decoration: const BoxDecoration(
             gradient: LinearGradient(
-                colors: [Color.fromARGB(255, 246, 227, 122),Color.fromARGB(255, 246, 221, 83),Color.fromARGB(255, 250, 218, 36),Color.fromARGB(255, 255, 225, 2), ],
+                colors: [yellow1Color,yellow2Color,yellow3Color,yellow4Color,],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
         child: Column(
