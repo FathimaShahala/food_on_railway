@@ -47,7 +47,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             child: const Text(
               'Skip',
               style: TextStyle(
-                color: Colors.black87,
+                color: black1Color,
                 fontSize: 17,
                 decoration: TextDecoration.underline,
               ),
@@ -87,7 +87,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                    Padding(
                      padding: const EdgeInsets.symmetric(horizontal: 25),
                      child: Text(controller.items[currentIndex].subTitle,
-                       style: const TextStyle(color: Colors.grey,fontSize: 14),textAlign: TextAlign.center,),
+                       style: const TextStyle(color: greyColor,fontSize: 14),textAlign: TextAlign.center,),
                    ),
 
                  ],
@@ -106,7 +106,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           margin: const EdgeInsets.symmetric(horizontal: 5),
           decoration:   BoxDecoration(
             borderRadius: BorderRadius.circular(50),
-            color: currentIndex == index? pinkColor : Colors.grey, 
+            color: currentIndex == index? pinkColor : greyColor, 
           ),
           height: 7,
           width: 7,
@@ -119,7 +119,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 20),
       width: MediaQuery.of(context).size.width *.9,
-      height: 55,
+      //height: 55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: pinkColor
@@ -135,7 +135,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           });
         },
         child: const Text( "Next",
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(color: whiteColor),),
       ),
     );
   }

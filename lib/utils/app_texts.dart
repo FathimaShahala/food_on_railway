@@ -9,4 +9,20 @@ class AppTexts {
 
   static const String loginTitle = "Login Account";
   static const String loginsubTitle = "Hello,welcome back to our account";
+
+  static const String signupTitle = "Create an Account";
+  static const String signupsubTitle = "Hello,welcome back to our account";
+
+  static const String otpTitle = "OTP Verification";
+  static const String otpTitle1 = "Enter OTP";
+  static const String otpsubTitle = "An 4 digit code has been sent to";
+  static const String otpsubTitle1 = "+91 9995380399";
+
+  static const String createTitle = "Create an Account";
+  static const String createsubTitle = "Hello,welcome back to our account";
+
+
 }
+
+
+

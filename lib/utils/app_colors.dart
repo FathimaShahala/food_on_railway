@@ -6,3 +6,14 @@
  const yellow4Color = Color.fromARGB(255, 255, 225, 2);
  
  const pinkColor = Colors.pink;
+
+ const whiteColor = Colors.white;
+
+ const greyColor = Colors.grey;
+ const grey1Color = Color.fromARGB(1, 89, 89, 89);
+
+
+
+
+ const blackColor = Colors.black;
+ const black1Color = Colors.black87;
