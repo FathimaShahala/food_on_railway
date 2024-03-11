@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:food_on_railway/utils/app_images.dart';
 
 class Category extends StatefulWidget {
@@ -70,41 +71,37 @@ class _CategoryState extends State<Category> {
                                     : BorderRadius.circular(10),
                                 border:  Border.all(color: Colors.pink, width: 1),
                               ),
-                                  //Center(
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
                                       children: [
-                                        Row(
-                                          children: [
-                                            Image.asset(images[index]),
-                                            const SizedBox(width: 5,),
-                                            Text(
-                                              items[index],
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w600,
-                                                color: current == index
-                                                    ? Colors.white
-                                                    : Colors.black,
-                                              ),
+                                        Image.asset(images[index]),
+                                          const SizedBox(width: 5,),
+                                          Text(
+                                            items[index],
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              color: current == index
+                                              ? Colors.white
+                                              : Colors.black,
                                             ),
-                                            
-                                          ],
+                                          ),                                            
+                                        ],
                                         ),
                                       ],
                                     ),
-                                 // ),
-                               // ],
-                              //),
                             ),
                           ),
                         ],
                       );
-                    }),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
+                    }
+                  ),
+                ),
+                //const SizedBox(height: 20,),
+                //Menu(),
+                
+            ])]));
   }
 }
+

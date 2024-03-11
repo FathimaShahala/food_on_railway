@@ -5,6 +5,7 @@ import 'package:food_on_railway/utils/app_images.dart';
 import 'package:food_on_railway/utils/app_texts.dart';
 import 'package:food_on_railway/utils/custom_text_field.dart';
 import 'package:food_on_railway/utils/extensions.dart';
+import 'package:food_on_railway/utils/primary_button.dart';
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
@@ -13,6 +14,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final _form = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,13 +107,7 @@ class _SignUpState extends State<SignUp> {
                         ],
                       ),
                       child: TextButton(
-                        onPressed: (){
-                          //Navigator.of(context).pushReplacement(
-                            //MaterialPageRoute(
-                              //builder: (_) => LoginScreen(),
-                           // )
-                          //);
-                        },
+                        onPressed: (){},
                          child: const Text( 
                           "Login with Google",
                           style: TextStyle(
@@ -125,25 +122,16 @@ class _SignUpState extends State<SignUp> {
                   ),
           
                   const SizedBox(height: 80,),
-          
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 20),
-                    width: MediaQuery.of(context).size.width *.9,
-                    height: 55,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: pinkColor
-                    ),
-                    child: TextButton(
-                      onPressed: (){
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (_) => OTPVerification(),));
-                      },
-                      child: const Text( 
-                        " Get OTP",
-                        style: TextStyle(color: whiteColor),),
-                    ),
-                  ),
+
+                  PrimaryButton(
+                    form: _form, 
+                    onPressed:(){
+                      Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (_) => OTPVerification(),
+                            )
+                          );},
+                    title: 'Get OTP',),
           
                 ]
               )

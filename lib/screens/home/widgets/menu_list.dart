@@ -10,7 +10,7 @@ class MenuList extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
-         margin: const EdgeInsets.symmetric(vertical: 5),
+         padding: const EdgeInsets.symmetric(vertical: 5),
          width: 354,
          height: 133,
          decoration: BoxDecoration(

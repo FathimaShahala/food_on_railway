@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_on_railway/screens/home/widgets/order_food_category.dart';
+import 'package:food_on_railway/screens/station.dart';
 
 class FoodOrder extends StatelessWidget {
   const FoodOrder({
@@ -69,7 +70,10 @@ class FoodOrder extends StatelessWidget {
                                           color: Colors.pink
                                         ),
                                         child: TextButton(
-                                          onPressed: (){},
+                                          onPressed: (){
+                                            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                              builder: (_) => const Station(),));
+                                          },
                                           child: const Text( 
                                             "Submit",
                                             style: TextStyle(color: Colors.white),

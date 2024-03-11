@@ -24,9 +24,52 @@ class AppImages {
   static const platform = "assets/images/ic_platform.png";
   static const coach = "assets/images/ic_coach.png";
 
- static const burger = "assets/images/burger.png";
- static const pizze = "assets/images/pizza.png";
- static const sandwich = "assets/images/sandwich.png";
+  static const burger = "assets/images/burger.png";
+  static const pizze = "assets/images/pizza.png";
+  static const sandwich = "assets/images/sandwich.png";
+
+  static const menu = "assets/images/menu.png";
+  static const star = "assets/images/ic_star.png";
+
+  static const home = "assets/images/ic_home.png";
+  static const cart = "assets/images/ic_cart.png";
+  static const ic_user = "assets/images/ic_user.png";
+  static const service = "assets/images/ic_service.png";
+
+  static const back = "assets/images/ic_back.png";
+  //static const down = "assets/images/ic_down.png";
+  static const food = "assets/images/food.png";
+
+  static const share = "assets/images/ic_share.png";
+  static const veg = "assets/images/ic_veg.png";
+  static const down = "assets/images/ic_arrow_down.png";
+  static const menu2 = "assets/images/menu2.png";
+  static const plus = "assets/images/ic_plus.png";
+  static const minus = "assets/images/ic_minus.png";
+  static const add = "assets/images/ic_add.png";
+
+  static const burgerBistro = "assets/images/burger_bistro.png";
+  static const symbol = "assets/images/symbol.png";
+  static const outStar = "assets/images/ic_star1.png";
+  static const ic_delivery = "assets/images/ic_delivery.png";
+  static const clock = "assets/images/ic_clock.png";
+
+ static const nonVeg = "assets/images/ic_non_veg.png";
+ static const user = "assets/images/user.png";
+ static const edit = "assets/images/ic_edit.png";
+
+ static const favorite = "assets/images/ic_favorite.png" ;
+ static const history = "assets/images/ic_orderHistory.png";
+ static const groupOrder = "assets/images/ic_groupOrder.png";
+ static const help = "assets/images/ic_help.png";
+ static const aboutUs = "assets/images/ic_aboutUs.png";
+ static const support = "assets/images/ic_support.png";
+ static const arrowRight = "assets/images/ic_rightArrow.png";
+
+
+
+
+ 
 
 
 

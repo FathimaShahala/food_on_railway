@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_on_railway/screens/login/signup/sign_up.dart';
+import 'package:food_on_railway/screens/navigation/bottom_navigation.dart';
 import 'package:food_on_railway/utils/app_colors.dart';
 import 'package:food_on_railway/utils/app_images.dart';
 import 'package:food_on_railway/utils/app_texts.dart';
@@ -196,12 +198,27 @@ class _LoginScreenState extends State<LoginScreen> {
                           
                   const SizedBox(height: 100,),
                           
-                   PrimaryButton(form: _form),
+                   PrimaryButton(
+                    form: _form, 
+                    onPressed:(){
+                      final isValid = _form.currentState!.validate();
+                      if(isValid){
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (_) => const BottomNavigationScreen(),));
+                      }
+                      else {
+                        Fluttertoast.showToast(
+                        msg: "Phone Number / Password is Incorrect",
+                        gravity: ToastGravity.SNACKBAR,
+                        fontSize: 16.0);
+                      }
+                    },
+                    title: 'Login',),
                   ],
                 ),
               ),
             ),
-         ),
+          ),
         );
       }
       Widget togglePassword() {

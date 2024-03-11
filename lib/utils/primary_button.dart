@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:food_on_railway/screens/home/home_screen.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:food_on_railway/screens/home/home_screen.dart';
 import 'package:food_on_railway/utils/app_colors.dart';
 
 class PrimaryButton extends StatelessWidget {
+  final GlobalKey<FormState> _form;
+  final VoidCallback? onPressed;
+  final String title;
+
   const PrimaryButton({
     super.key,
     required GlobalKey<FormState> form,
+    required this. onPressed,
+    required this. title
   }) : _form = form;
 
-  final GlobalKey<FormState> _form;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +27,23 @@ class PrimaryButton extends StatelessWidget {
        color: pinkColor
      ),
      child: MaterialButton(
-       onPressed: (){
-         final isValid = _form.currentState!.validate();
-         if(isValid){
-           Navigator.of(context).pushReplacement(MaterialPageRoute(
-             builder: (_) => const HomeScreen(),));
-         }
-         else {
-            Fluttertoast.showToast(
-            msg: "Phone Number / Password is Incorrect",
-            gravity: ToastGravity.SNACKBAR,
-            fontSize: 16.0);
-         }
-      },
-      child: const Text( 
-        "Log in",
-        style: TextStyle(color: whiteColor),),
+       onPressed: onPressed,
+        //Navigator.of(context).pushNamed('/$route');
+         //final isValid = _form.currentState!.validate();
+         //if(isValid){
+           //Navigator.of(context).pushReplacement(MaterialPageRoute(
+             //builder: (_) => const HomeScreen(),));
+         //}
+         //else {
+           // Fluttertoast.showToast(
+            //msg: "Phone Number / Password is Incorrect",
+            //gravity: ToastGravity.SNACKBAR,
+            //fontSize: 16.0);
+        // }
+      
+      child:  Text(
+        title,
+        style: const TextStyle(color: whiteColor),),
      ),
                      );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_on_railway/screens/login/create/create_account.dart';
 import 'package:food_on_railway/screens/login/otp/otp_form.dart';
-import 'package:food_on_railway/utils/app_colors.dart';
 import 'package:food_on_railway/utils/app_images.dart';
 import 'package:food_on_railway/utils/app_texts.dart';
+import 'package:food_on_railway/utils/primary_button.dart';
 
 
 class OTPVerification extends StatefulWidget {
@@ -14,6 +14,8 @@ class OTPVerification extends StatefulWidget {
 }
 
 class _OTPVerificationState extends State<OTPVerification> {
+    final _form = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,27 +48,12 @@ class _OTPVerificationState extends State<OTPVerification> {
                 const Center(child:  Text("Resend OTP")),
           
                 const SizedBox(height: 30,),
-          
-                Container(
-                  margin: const EdgeInsets.symmetric(vertical: 20),
-                  width: MediaQuery.of(context).size.width *.9,
-                  //height: 55,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: pinkColor
-                  ),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (_) => CreateAccount(),));
-                      },
-                      child: const Text( 
-                        "Verify",
-                        style: TextStyle(color: whiteColor),),
-                    ),
-                  ),
-          
-          
+
+                PrimaryButton(
+                    form: _form, 
+                    onPressed:(){ Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (_) => CreateAccount(),));},
+                    title: 'Verify',),
           
           
               ]
